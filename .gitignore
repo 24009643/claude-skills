@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# 日志与临时文件
+*.log
+*.tmp
+
+# 依赖(如果将来某个 skill 带脚本)
+node_modules/
+__pycache__/
+.venv/
