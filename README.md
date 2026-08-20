@@ -21,8 +21,12 @@ claude-skills/
 ├── README.md
 ├── LICENSE
 ├── install.sh                     # 一键把 skills/ 下所有技能软链到 ~/.claude/skills/
-└── skills/
-    └── engineering-philosophy/    # 每个 skill 一个独立子库,自带 README
+└── skills/                        # 每个 skill 一个独立子库,自带 README
+    ├── engineering-philosophy/
+    │   ├── README.md
+    │   ├── SKILL.md
+    │   └── references/
+    └── orthogonal-scout/
         ├── README.md
         ├── SKILL.md
         └── references/
@@ -30,11 +34,14 @@ claude-skills/
 
 ## 技能清单
 
-| Skill | 一句话 | 触发方式 |
-|---|---|---|
-| [engineering-philosophy](skills/engineering-philosophy) | 给**非科班的 Vibe Coding 者**:看穿你用 AI 做出来的东西——每一层是什么、是真是假、这次该做多真,让 vibe coding 更全面、更具体 | 显式点名 `/engineering-philosophy` |
+| Skill | 类别 | 一句话 | 触发方式 |
+|---|---|---|---|
+| [engineering-philosophy](skills/engineering-philosophy) | 判断框架 | 给**非科班的 Vibe Coding 者**:看穿你用 AI 做出来的东西——每一层是什么、是真是假、这次该做多真,让 vibe coding 更全面、更具体 | 显式点名 `/engineering-philosophy` |
+| [orthogonal-scout](skills/orthogonal-scout) | 创新调研 | 给**想做"形态还没人定义"的东西的人**:前沿当靶、非 AI 老学科当发射台,给你的问题找"结构近 / 表面远"的跨域新形态,每次 ≤5 条 | 点名 `/orthogonal-scout`,或跨域找新形态时自动出场 |
 
-> 👉 想 3 分钟明白它干嘛,直接看那个[「读书笔记 App」的实际例子](skills/engineering-philosophy#一个实际例子)。
+> 👉 想 3 分钟明白它们干嘛,直接看实际例子:[engineering-philosophy 的「读书笔记 App」](skills/engineering-philosophy#一个实际例子) · [orthogonal-scout 的「数字人在场感」](skills/orthogonal-scout#一个实际例子)。
+
+<sub>**分类约定**:`判断框架` = 一副透镜,套在你的东西上给判断;`创新调研` = 一条工作流,跑完给你候选产出。以后新增 skill 归入既有类别,或按需开新类。</sub>
 
 ## 安装
 
