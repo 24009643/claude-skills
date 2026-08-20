@@ -1,10 +1,18 @@
 # claude-skills
 
-> 一组给 [Claude Code](https://docs.claude.com/en/docs/claude-code) 用的自定义 Skill。每个技能独立成库,放在 `skills/<name>/` 下。
+> **专门为 [Claude(Claude Code)](https://docs.claude.com/en/docs/claude-code) 生态打造的自定义 skill 合集。** 每个 skill 对应一种能力、独立成库,放在 `skills/<name>/` 下。
+>
+> 这个仓库本身是个"总目录",它只讲清两件事:**① 这是为 Claude 做的、② 现在收录了哪些 skill**。每个 skill 具体干嘛、怎么用,进它自己的文件夹看。
 
 ## 什么是 Skill?
 
 Skill 是一份写给 Claude 的"操作说明书":当你的任务属于某一类(某套评审清单、某个工作流、某种判断框架)时,Claude 会**加载它、按里面的规范来做**,而不是用默认方式。一个 skill 就是一个目录,核心是带 YAML frontmatter 的 `SKILL.md`,外加可选的 `references/` 深度文档。
+
+## 为 Claude 生态而做
+
+这里的 skill 都是**按 Claude Code 的 skill 机制**做的:一个带 frontmatter 的 `SKILL.md`、靠显式点名触发、装在 `~/.claude/skills/`。所以它们服务的是 **Claude 生态**。
+
+> **想搬到别的 agent(比如 OpenAI Codex CLI)?** skill 的*内容*(例如"工程判断"本身)跟工具无关、能直接复用;但*打包与触发的方式*是 Claude Code 的约定——迁到别的工具时,内容照搬,规则要按目标工具各自的约定做细微调整。
 
 ## 目录结构(分库)
 
@@ -48,7 +56,7 @@ cp -R skills/engineering-philosophy ~/.claude/skills/
 
 ## 设计原则
 
-这些 skill 自己也遵守它们所倡导的工程思维:**结构分库、每个模块自文档、只做够用的抽象、冗余就删**。`engineering-philosophy` 本身是一场"多模型分角色辩论 + 裁判综合 + 对抗式审查 + 深度瘦身"的产物——完整取舍记录在它的 [`references/debate-synthesis.md`](skills/engineering-philosophy/references/debate-synthesis.md)。
+这些 skill 自己也遵守它们所倡导的工程思维:**结构分库、每个模块自文档、只做够用的抽象、冗余就删**。
 
 ## License
 
