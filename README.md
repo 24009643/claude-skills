@@ -24,7 +24,9 @@ claude-skills/
 
 | Skill | 一句话 | 触发方式 |
 |---|---|---|
-| [engineering-philosophy](skills/engineering-philosophy) | 给业余 / 非技术 PM 的工程哲学:做 Demo / POC / MVP 时,该在哪一层作弊、哪一层动真格 | 显式点名 `/engineering-philosophy` |
+| [engineering-philosophy](skills/engineering-philosophy) | 给**非科班的 Vibe Coding 者**:看穿你用 AI 做出来的东西——每一层是什么、是真是假、这次该做多真,让 vibe coding 更全面、更具体 | 显式点名 `/engineering-philosophy` |
+
+> 👉 想 3 分钟明白它干嘛,直接看那个[「读书笔记 App」的实际例子](skills/engineering-philosophy#一个实际例子)。
 
 ## 安装
 
